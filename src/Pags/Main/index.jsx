@@ -1,8 +1,7 @@
 import React, { useState } from 'react'
-// import Delet from '../function/Delet/index'
-// import Edit from '../function/Edit/index'
-import Calculator from '../function/Calculator'
-import Button from '../components/Button'
+import Calculator from '../../function/Calculator/index'
+import Screen from '../Screen'
+import Button from '../../components/Button/index'
 import { FiDelete } from 'react-icons/fi'
 import { RiDeleteBin2Line } from 'react-icons/ri'
 import style from './style.module.css'
@@ -26,39 +25,36 @@ function Main() {
 
   return (
     <div className={style.main}>
-      <table>
+         <Screen arrangArray={arrangArray} solution={solution}/>
+      <table >
         <tbody>
           <tr>
-            <td> <Button name="func" value={"+"} onclick={sever} data="+" /></td>
-            <td> <Button name="func" value={"*"} onclick={sever} data="*" /></td>
-            <td><Button name="func" value={"-"} onclick={sever} data="-" /></td>
-            <td><Button name="func" value={"/"} onclick={sever} data="/" /></td>
+            <td> <Button name="function" value={"+"} onclick={sever} data="+" /></td>
+            <td> <Button name="function" value={"*"} onclick={sever} data="*" /></td>
+            <td><Button name="function" value={"-"} onclick={sever} data="-" /></td>
+            <td><Button name="function" value={"/"} onclick={sever} data="/" /></td>
           </tr>
           <tr>
             <td>  <Button name="number" value={9} onclick={sever} data="9" /></td>
             <td>   <Button name="number" value={8} onclick={sever} data="8" /></td>
             <td>  <Button name="number" value={7} onclick={sever} data="7" /></td>
-            <td><Button name="func" onclick={()=>{setArrangArray(arrangArray.slice(0,-1))}} data={<FiDelete />} /></td>
+            <td><Button name="function" onclick={()=>{setArrangArray(arrangArray.slice(0,-1))}} data={<FiDelete />} /></td>
           </tr>
           <tr>
             <td>    <Button name="number" value={6} onclick={sever} data="6" /></td>
             <td>   <Button name="number" value={5} onclick={sever} data="5" /></td>
             <td>   <Button name="number" value={4} onclick={sever} data="4" /></td>
-            <td>  <Button name="=" value={"="} onclick={equal} data="=" /></td>
+            <td>  <Button name="function" value={"="} onclick={equal} data="=" /></td>
           </tr>
           <tr>
             <td>    <Button name="number" value={3} onclick={sever} data="3" /></td>
             <td>   <Button name="number" value={2} onclick={sever} data="2" /></td>
             <td>   <Button name="number" value={1} onclick={sever} data="1" /></td>
-            <td>  <Button name="funcDeletAll" onclick={deletAll} data={<RiDeleteBin2Line />} /></td>
-          </tr>
-          <tr>
-            <td>    <Button name="number" value={0} onclick={sever} data="0" /></td>
-            <td>   <Button name="." value={"."} onclick={sever} data="." /></td>
+            <td>      <Button name="number" value={0} onclick={sever} data="0" /></td>
+            <td>  <Button name="function" onclick={deletAll} data={<RiDeleteBin2Line />} /></td> 
           </tr>
         </tbody>
       </table>
-      {arrangArray}{solution}
     </div>
   )
 }

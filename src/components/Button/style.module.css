@@ -1,6 +1,10 @@
 .function{
    background-color: aqua;
+   width: 100%;
+   height: 100%;
 }
 .number{
     background-color: blueviolet;
+    width: 100%;
+    height: 100%;
 }

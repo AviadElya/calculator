@@ -1,9 +1,9 @@
-import Main from "./Main";
+import Main from "./Pags/Main";
 
 
 function App() {
   return (
-    <div>
+    <div style={{display: "flex",alignItems:"center",justifyContent:"center"}}>
       <Main />
     </div>
   );

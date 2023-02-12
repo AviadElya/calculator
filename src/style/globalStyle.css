@@ -1,0 +1,29 @@
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Babylonica';
+
+}
+:root{
+  --primary:rgb(219, 226, 239);
+  --secondary:rgb(63, 114, 175);
+  font-family: 'Babylonica';
+}
+
+
+/* for defrent size screeb defrent size font */
+button {
+  font-size: 20px;
+}
+
+
+
+@media only screen and (min-width: 768px) {
+  button {
+    font-size:30px;
+  }
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Babylonica&family=Poppins:ital,wght@1,100&family=Roboto+Condensed:wght@300&display=swap');
